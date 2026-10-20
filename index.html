@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A-Frame iframe</title>
+    <meta name="description" content="exemple iframe amb a-frame">
+	 <!-- añadi un borde azul al visualizador -->
+	<style>
+		#pagina{
+			width: 900px;
+            padding: 25px;
+			margin: auto;
+            background-color: #b6dae3;
+		}
+		#header{
+			height: 40px;
+			text-align:center;
+		}
+
+		#VRarea{
+			position: relative;
+			height: 550px;
+			background-color:black;
+		}
+		#vr1{
+			width: 100%;
+			height: 100%;
+		}
+		p{
+			text-align:center;
+		}
+	</style>
+  </head>
+  <body>
+	<div id="pagina">
+		<div id="header">
+			<h1>VR A-FRAME PEC1</h1>
+		</div>
+		<div id="VRarea">
+			<iframe id="vr1" src="recursos/escena1.html"></iframe>
+		</div>
+		<div id="footer">
+			 <!--el cuadro que indicaba en el tutorial no se veia ningunas gafas y daba mala interaccion 
+			 asi que simplemente decidi quitarlo y añadir un mensaje mas adecuado -->
+			<p>Click en el cuadro de flechas para pantalla completa</p>
+		</div>		
+	</div>
+  </body>
+</html>
