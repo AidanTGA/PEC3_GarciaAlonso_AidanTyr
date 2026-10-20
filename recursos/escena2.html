@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEC1_ESCENA2</title>
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@gh-pages/examples/js/play-on-click.js"></script>
+    <!-- script de A-frame para reproducir el video al hacer clic en la escena, sino no se iniciaba automaticamente https://github.com/aframevr/aframe/blob/gh-pages/examples/test/videosphere/index.html
+      -->
+</head>
+
+<body>
+
+    <a-scene>
+        <a-camera>
+            <a-cursor color="#66ffff"></a-cursor>
+        </a-camera>
+
+
+        <a-assets>
+            <video id="park" preload="auto" src="video.mp4" autoplay loop="true"></video>
+            <a-asset-item id="ball-mtl" src="source/Ball.mtl"></a-asset-item>
+            <a-asset-item id="ball-obj" src="source/Ball.obj"></a-asset-item>
+        </a-assets>
+
+        <a-videosphere src="#park" play-on-click></a-videosphere>
+
+         <a-entity obj-model="obj: #ball-obj; mtl: #ball-mtl" position="0 1.6 -5" scale="0.5 0.5 0.5" animation="property: position;
+             to: 0 0 -5;
+             dur: 550;
+             dir: alternate;
+             loop: true">
+        </a-entity>
+
+        <a-link href="escena1.html" title="escena 1" position="10 1 0" rotation="0 90 20"></a-link>
+
+    </a-scene>
+
+</body>
+
+</html>
